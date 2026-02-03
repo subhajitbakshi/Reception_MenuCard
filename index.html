@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reception Dinner Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #4b0f1e, #7a1f2b, #4b0f1e);
+    overflow-y: auto; /* ✅ scrolling enabled */
+}
+
+/* Background visual layer */
+.bg-effect {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle, rgba(255,215,0,0.35) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.25;
+    animation: float 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-60px); }
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-card {
+    width: 100%;
+    max-width: 620px;
+    padding: 35px 28px;
+    border-radius: 22px;
+    background: rgba(75, 15, 30, 0.78);
+    backdrop-filter: blur(14px);
+    box-shadow:
+        0 0 0 2px rgba(255,215,0,0.45),
+        0 25px 50px rgba(0,0,0,0.6);
+    animation: cardFade 1.2s ease;
+}
+
+@keyframes cardFade {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.menu-card::after {
+    content: "✿";
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 120px;
+    color: rgba(255,215,0,0.08);
+}
+
+.title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 52px;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 6px;
+    text-shadow: 0 0 12px rgba(255,215,0,0.4);
+}
+
+.subtitle {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.names {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffe28a;
+}
+
+.date {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 26px;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: #ffd700;
+    border-bottom: 1px solid rgba(255,215,0,0.45);
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    padding: 7px 0;
+    text-align: center;
+    font-size: 15px;
+    animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    opacity: 0.85;
+    color: #ffe28a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-effect"></div>
+
+<div class="container">
+    <div class="menu-card">
+        <div class="title">Reception Dinner</div>
+        <div class="subtitle">WITH WARM REGARDS</div>
+
+        <div class="names">Subhajit & Sanghamitra</div>
+        <div class="date">Reception • 6th March 2026</div>
+
+        <div style="text-align:center">
+            <div class="menu-title">Menu</div>
+        </div>
+
+        <ul>
+            <li>Mineral Water</li>
+            <li>Fresh Green Salad & Kasundi</li>
+            <li>Vetki Fry / Paneer Pasanda</li>
+            <li>Rumali Roti</li>
+            <li>Dal Makhani</li>
+            <li>Veg Fried Rice</li>
+            <li>Kadai Chicken / Kadai Paneer</li>
+            <li>Bhaja Moong Dal Vada (Vaat)</li>
+            <li>Mutton Kosha / Fish Curry</li>
+            <li>Mango Chutney</li>
+            <li>Papad</li>
+            <li>Rasgulla</li>
+            <li>Rajbhog</li>
+            <li>Sarpuriya</li>
+            <li>Pan</li>
+        </ul>
+
+        <footer>
+            Thank you for celebrating with us
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
